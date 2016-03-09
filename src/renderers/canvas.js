@@ -90,7 +90,10 @@ CanvasRenderer.prototype.shape = function(shape) {
 };
 
 CanvasRenderer.prototype.font = function(color, style, variant, weight, size, family) {
-    this.setFillStyle(color).font = [style, variant, weight, size, family].join(" ").split(",")[0];
+    // @SP fixed font rendering issue
+    // //var font = [style, variant, weight, size, family].join(" ").split(",")[0];
+    var font = [style, variant, weight, size, family].join(" ");
+    this.setFillStyle(color).font = font;
 };
 
 CanvasRenderer.prototype.fontShadow = function(color, offsetX, offsetY, blur) {
