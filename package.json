@@ -42,7 +42,7 @@
     "wd": "^0.4.0"
   },
   "scripts": {
-    "test": "grunt travis --verbose",
+    "test": "grunt travis --verbose --force",
     "start": "grunt server",
     "sauceconnect": "tests/sauceconnect.js"
   },
